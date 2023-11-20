@@ -32,7 +32,7 @@ class Gomoku:
     def __init__(self, board_sz=11, gui=False):
         super().__init__()
         self.board_sz = board_sz
-        self.board = np.zeros((2, board_sz, board_sz), dtype=np.int)
+        self.board = np.zeros((2, board_sz, board_sz), dtype=np.int64)
         self.number = np.zeros((board_sz, board_sz), dtype=int)
         self.k = 1  # step number
         self.result = 0
