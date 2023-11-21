@@ -1,4 +1,38 @@
-from MCTSBase import MCTSBase
+from MCTSBase import MCTSBase, TreeNode
+
+
+class GomokuNode(TreeNode):
+    '''
+    Base class for MCT node. The node has to support the following four methods.
+    '''
+    def is_terminal(self):
+        '''
+        :return: True if this node is a terminal node, False otherwise.
+        '''
+        pass
+
+    def value(self):
+        '''
+        :return: the value of the node form the current player's point of view
+        '''
+        pass
+
+    def find_action(self):
+        '''
+        Find the action with the highest upper confidence bound to take from the state represented by this MC tree node.
+        :return: action as a tuple (x, y), i.e., putting down a piece at location x, y
+        '''
+        pass
+
+    def update(self, v):
+        '''
+        Update the statistics/counts and values for this node
+        :param v: value backup following the action that was selected in the last call of "find_action"
+        :return: None
+        '''
+        pass
+
+
 
 class MCTS(MCTSBase):
     """
